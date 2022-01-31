@@ -4,18 +4,18 @@ namespace Composite.Task2
 {
     public class InputText : IComponent
     {
-        string name;
-        string value;
+        private string _name;
+        private string _value;
 
         public InputText(string name, string value)
         {
-            this.name = name;
-            this.value = value;
+            _name = name;
+            _value = value;
         }
 
         public string ConvertToString(int depth = 0)
         {
-            throw new NotImplementedException();
+            return $"{new string(' ', depth)}<inputText name='{_name}' value='{_value}'/>";
         }
     }
 }

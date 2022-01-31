@@ -4,16 +4,16 @@ namespace Composite.Task2
 {
     public class LabelText : IComponent
     {
-        string value;
+        private string _value;
 
         public LabelText(string value)
         {
-            this.value = value;
+            _value = value;
         }
 
         public string ConvertToString(int depth = 0)
         {
-            throw new NotImplementedException();
+            return $"{new string(' ', depth)}<label value='{_value}'/>";
         }
     }
 }
