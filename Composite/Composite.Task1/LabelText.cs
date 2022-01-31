@@ -4,16 +4,16 @@ namespace Composite.Task1
 {
     public class LabelText
     {
-        string value;
+        private string _value;
 
         public LabelText(string value)
         {
-            this.value = value;
+            _value = value;
         }
 
         public string ConvertToString()
         {
-            throw new NotImplementedException();
+            return $"<label value='{_value}'/>";
         }
     }
 }

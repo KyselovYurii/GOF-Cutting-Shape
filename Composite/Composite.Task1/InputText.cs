@@ -4,18 +4,18 @@ namespace Composite.Task1
 {
     public class InputText
     {
-        string name;
-        string value;
+        private string _name;
+        private string _value;
 
         public InputText(string name, string value)
         {
-            this.name = name;
-            this.value = value;
+            _name = name;
+            _value = value;
         }
 
         public string ConvertToString()
         {
-            throw new NotImplementedException();
+            return $"<inputText name='{_name}' value='{_value}'/>";
         }
     }
 }
